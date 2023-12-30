@@ -4,16 +4,16 @@ app = Flask(__name__)
 
 data = [
 {
-"name":"1"
+"name":1
 }, 
 {
-"name":"2"
+"name":2
 }, 
 {
-"name":"3"
+"name":3
 }, 
 {
-"name":"4"
+"name":4
 }
 ]
 
@@ -24,10 +24,10 @@ def show_names():
     
 @app.get("/name/<int:id>")
 
-def get_name(id):
+def get_name(int(id)):
     if True:
         for any in data:
-            if str(any["name"]) == str(id):
+            if any["name"] == id:
             
                 return jsonify(any)
                 
@@ -37,5 +37,5 @@ def get_name(id):
     else: 
         return {"error": "not json request"}    
     
-    
+
 

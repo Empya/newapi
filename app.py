@@ -25,7 +25,7 @@ def show_names():
 @app.get("/name/<int:id>")
 
 def get_name(id):
-    if request.is_json:
+    if True:
         for any in data:
             if str(any["name"]) == str(id):
             
